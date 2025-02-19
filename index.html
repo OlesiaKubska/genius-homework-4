@@ -67,7 +67,7 @@
               <h1 class="hero-title">Beauty Zone</h1>
             </div>
             <div class="hero-content-button">
-              <button class="hero-button" type="button">
+              <button class="hero-button modal-btn-open" type="button">
                 Замовити дзвінок
               </button>
               <p class="hero-text">
@@ -77,7 +77,7 @@
           </div>
         </div>
       </section>
-      <section class="section" id="about-section">
+      <section class="section about-section" id="about-section">
         <div class="container">
           <div class="about-container">
             <div class="about-content">
@@ -301,9 +301,15 @@
             </div>
           </address>
         </div>
-
-        <img src="./images/footer.png" alt="bottles with drops for skin" />
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">X</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
