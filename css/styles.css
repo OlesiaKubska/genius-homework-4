@@ -87,18 +87,20 @@ button {
     margin: 0 auto;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 32px 40px;
-    background-color: rgba(255, 255, 255, 0.25) ;
-    position: fixed;
+.header {
+    position: absolute;
     width: 100%;
-    height: 106px;
+    background-color: rgba(255, 255, 255, 0.25) ;
     top: 0;
     left: 0;
     z-index: 1000;
+    padding: 32px 40px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;    
 }
 
 .header-nav {
@@ -125,6 +127,7 @@ button {
 .header-link {
     color: var(--color-primary-dark );
     fill: var(--color-primary-dark );
+    transition: color 0.2s fill 0.2s;
 }
 
 .header-link:hover {
@@ -202,6 +205,7 @@ button {
     background-color: var(--color-accent );
     border: 2px solid var(--color-accent );
     border-radius: 32px;
+    transition: background-color 0.2s color 0.2s;
 }
 
 .hero-button:hover {
@@ -255,13 +259,39 @@ button {
     padding-bottom: 100px;
 }
 
+@keyframes spin-scale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.4);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+}
+  
+  @keyframes spin-scale-small {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(-180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(-360deg) scale(1);
+    }
+  }
+
 .about-container::before {
     content: url('../images/star-1.png');
     position: absolute;
-    bottom: 40%;
-    right: 30%;
+    bottom: 48%;
+    right: 28%;
     width: 64px;
     height: 64px;
+    animation: spin-scale 5s infinite ease-in-out;
+    transform-origin: center;
 }
 
 .about-container::after {
@@ -271,6 +301,8 @@ button {
     right: 0;
     width: 40px;
     height: 40px;
+    animation: spin-scale-small 4s infinite ease-in-out;
+    transform-origin: center;
 }
 
 .about-content {
@@ -297,6 +329,8 @@ button {
     background-image: url('../images/star-3.png');
     background-size: contain;
     background-repeat: no-repeat;
+    animation: spin-scale-small 6s infinite alternate;
+    transform-origin: center;
 }
 
 .about-title {
@@ -371,6 +405,11 @@ button {
     padding: 24px 32px;
     border-radius: 32px;
     box-shadow: 0px 4px 4px 0px #A8C6F561;
+    transition: transform 0.2s;
+}
+
+.why-card:hover {
+    transform: scale(1.05);
 }
 
 .why-icon {
@@ -398,11 +437,17 @@ button {
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid var(--color-background-dark );
+    transition: background-color 0.2s fill 0.2s border 0.2s;
 }
 
 .procedures-button:hover {
     background-color: var(--color-accent );
     fill: var(--color-primary-light );
+    border: none;
+}
+
+.procedures-button.next {
+    transform: rotate(180deg);
 }
 
 .procedures-list {
@@ -420,6 +465,11 @@ button {
     background-position: center;
     position: relative;
     overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.procedures-article:hover {
+    transform: scale(1.05);
 }
 
 .procedures-article::before {
@@ -486,6 +536,7 @@ button {
     background-color: var(--color-accent );
     border: 2px solid var(--color-accent );
     border-radius: 24px;
+    transition: background-color 0.2s;
 }
 
 .form-button:hover {
@@ -541,6 +592,7 @@ footer::before {
     color: var(--color-primary-light );
     font-size: 16px;
     line-height: 1.1;
+    transition: color 0.2s;
 }
 
 .footer-link:hover {
@@ -552,6 +604,7 @@ footer::before {
     font-size: 16px;
     line-height: 1.1;
     font-style: normal;
+    transition: color 0.3s;
 }
 
 .address-link:hover {
@@ -569,6 +622,7 @@ footer::before {
     line-height: 1.1;
     font-style: normal;
     margin-bottom: 16px;
+    transition: color 0.3s;
 }
 
 .address-info-link:hover {
@@ -605,7 +659,9 @@ footer::before {
     justify-content: center;
     align-items: center;
     background-color: rgba(1, 31, 74, 0.4);
+    padding: 20px 0;
     z-index: 1000;
+    transition: opacity 0.2s visibility 0.2s;
 }
 
 .backdrop.is-hidden {
@@ -616,8 +672,10 @@ footer::before {
 
 .modal {
     position: relative;
-    width: 722px;
-    height: 680px;
+    width: 100%;
+    max-width: 722px;
+    height: 100%;
+    max-height: 680px;
     background-color: var(--color-primary-dark );
     border-radius: 48px;
 }
@@ -632,10 +690,9 @@ footer::before {
     background-color: transparent;
     border: none;
     color: white;
+    transition: color 0.2s;
 }
 
 .modal-btn-close:hover {
     color: var(--color-accent );
 }
-
-
