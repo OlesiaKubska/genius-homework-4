@@ -227,6 +227,9 @@
                       name="user-name"
                       id="user-name"
                       placeholder="Ваше ім'я та прізвище"
+                      required
+                      pattern="^[А-ЯІЇЄҐа-яіїєґA-Za-z]+\s[А-ЯІЇЄҐа-яіїєґA-Za-z]+$"
+                      title="Введіть ім'я та прізвище через пробіл"
                     />
                   </div>
 
@@ -236,10 +239,13 @@
                     >
                     <input
                       class="form-input"
-                      type="text"
+                      type="tel"
                       name="user-tel"
                       id="user-tel"
                       placeholder="Ваш номер телефону"
+                      required
+                      pattern="^\+380\d{9}$"
+                      title="Введіть номер у форматі +380XXXXXXXXX"
                     />
                   </div>
 
@@ -253,6 +259,9 @@
                       name="user-email"
                       id="user-email"
                       placeholder="Ваша електронна пошта"
+                      required
+                      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                      title="Введіть коректну електронну адресу"
                     />
                   </div>
 
@@ -359,12 +368,7 @@
           Запишіться <span class="accent">безкоштовно</span> та отримайте
           подарунок
         </h3>
-        <form
-          name="modal-form"
-          class="modal-form"
-          autocomplete="off"
-          novalidate
-        >
+        <form name="modal-form" class="modal-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label visually-hidden" for="user-name"
               >Ваше ім'я та прізвище</label
@@ -375,6 +379,9 @@
               name="user-name"
               id="user-name"
               placeholder="Ваше ім'я та прізвище"
+              required
+              pattern="^[А-ЯІЇЄҐа-яіїєґA-Za-z]+\s[А-ЯІЇЄҐа-яіїєґA-Za-z]+$"
+              title="Введіть ім'я та прізвище через пробіл"
             />
           </div>
 
@@ -384,10 +391,13 @@
             >
             <input
               class="form-input"
-              type="text"
+              type="tel"
               name="user-tel"
               id="user-tel"
               placeholder="Ваш номер телефону"
+              required
+              pattern="^\+380\d{9}$"
+              title="Введіть номер у форматі +380XXXXXXXXX"
             />
           </div>
 
@@ -401,6 +411,9 @@
               name="user-email"
               id="user-email"
               placeholder="Ваша електронна пошта"
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Введіть коректну електронну адресу"
             />
           </div>
 
