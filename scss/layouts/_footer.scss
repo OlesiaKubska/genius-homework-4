@@ -1,0 +1,99 @@
+.footer {
+    position: relative;
+    padding: 56px 0;
+    background-color: var(--color-primary-dark );
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    background-repeat: no-repeat;
+    right: -30px;
+    width: 278px;
+    height: 213px;
+    background-image: url(../images/footer.png);
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav, 
+.address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+    flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
+
+.footer-link {
+    color: var(--color-primary-light );
+    font-size: 16px;
+    line-height: 1.1;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--color-accent );
+}
+
+.address-link {
+    color: var(--color-primary-light );
+    font-size: 16px;
+    line-height: 1.1;
+    font-style: normal;
+    transition: color 0.3s;
+}
+
+.address-link:hover {
+    color: var(--color-accent );
+}
+
+.address-item,
+.footer-item {
+    margin-bottom: 16px;
+}
+
+.address-info-link {
+    color: var(--color-primary-light );
+    font-size: 16px;
+    line-height: 1.1;
+    font-style: normal;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+}
+
+.address-info-link:hover {
+    color: var(--color-accent );
+}
+
+.address-info-text {
+    color: var(--color-accent-text );
+    font-size: 13px;
+    line-height: 1.15;
+    font-style: normal;
+}
+
+.address-media {
+    display: flex;
+    gap: 24px;
+}
+
+.address-icon {
+    fill: var(--color-primary-light );
+}
+
+.address-icon:hover {
+    fill: var(--color-accent );
+}

@@ -1,0 +1,47 @@
+.header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25) ;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 32px 40px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;    
+}
+
+.header-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-contacts-list {
+    display: flex;
+    gap: 32px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-link {
+    color: var(--color-primary-dark );
+    fill: var(--color-primary-dark );
+    transition: color 0.2s fill 0.2s;
+}
+
+.header-link:hover {
+    color: var(--color-accent );
+    fill: var(--color-accent );
+}

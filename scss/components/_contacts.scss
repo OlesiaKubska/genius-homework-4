@@ -1,0 +1,27 @@
+.contacts-section {
+    padding-bottom: 48px;
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.contacts-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 32px;
+}
+
+.contacts-title {
+    text-align: center;
+}
+
+.contacts-box {
+    background-color: var(--color-background-dark );
+    border-radius: 32px;
+    padding: 48px 56px;
+    max-width: 424px;
+}
