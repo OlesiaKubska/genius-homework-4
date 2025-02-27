@@ -1,0 +1,14 @@
+.form-terms {
+    max-width: 208px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--color-accent-text );
+
+    &__link {
+        color: var(--color-accent-text );
+        text-underline-offset: 2px;
+        text-decoration: underline;
+    }
+}

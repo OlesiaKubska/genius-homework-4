@@ -8,60 +8,46 @@
     position: relative;
     padding-top: 114px;
     z-index: 2;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 528px;
+        margin-left: 120px;
+        gap: 40px;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    &__title {
+        font-family: 'Play', sans-serif;
+        color: var(--color-accent );
+        font-weight: 700;
+        font-size: 140px;
+        line-height: 0.8;
+        margin-bottom: 0;
+    }
+    
+    &__content-text {
+        margin-bottom: 0;
+    }
+    
+    &__content-button {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 238px;
+    }
+    
+    &__text {
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 0;
+    }
 }
 
-.hero-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 528px;
-    margin-left: 120px;
-    gap: 40px;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.hero-title {
-    font-family: 'Play', sans-serif;
-    color: var(--color-accent );
-    font-weight: 700;
-    font-size: 140px;
-    line-height: 0.8;
-    margin-bottom: 0;
-}
-
-.hero-content-text {
-    margin-bottom: 0;
-}
-
-.hero-content-button {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 238px;
-}
-
-.hero-button {
-    padding: 16px 32px;
-    font-weight: 600;
-    color: var(--color-button );
-    background-color: var(--color-accent );
-    border: 2px solid var(--color-accent );
-    border-radius: 32px;
-    transition: background-color 0.2s color 0.2s;
-}
-
-.hero-button:hover {
-    color: var(--color-accent );
-    background-color: transparent;
-}
-
-.hero-text {
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 0;
-}

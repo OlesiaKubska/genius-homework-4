@@ -1,0 +1,38 @@
+.input {
+    position: relative;
+
+    &__label {
+        position: absolute;
+        top: 16px;
+        left: 42px;
+        color: var(--color-primary-light );
+    }
+    
+    &__control {
+        padding: 18px 32px;
+        width: 100%;
+        max-width: 310px;
+        font-size: 13px;
+        line-height: 1.15;
+        border: 2px solid var(--color-accent-text );
+        border-radius: 32px;
+        background-color: transparent;
+        color: var(--color-primary-light );
+        transition: background-color 0.2s;
+    
+        &:focus {
+            outline: none;
+            background-color: var(--color-accent-text );
+        }
+        
+        &::placeholder {
+            color: var(--color-primary-light );
+            font-size: 13px;
+            line-height: 1.15;
+        }
+        
+        &:focus::placeholder {
+            color: var(--color-primary-light );
+        }
+    }
+}

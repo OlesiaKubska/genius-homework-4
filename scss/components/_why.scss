@@ -5,42 +5,20 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
-}
 
-.why-container {
-    position: relative;
-    z-index: 1;
-}
-
-.why-title {
-    text-align: center;
-}
-
-.why-text {
-    line-height: 1.33;
-    margin-bottom: 0;
-}
-
-.why-list {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 56px;
-}
-
-.why-card {
-    background-color: var(--color-primary-light );
-    max-width: 316px;
-    padding: 24px 32px;
-    border-radius: 32px;
-    box-shadow: 0px 4px 4px 0px #A8C6F561;
-    transition: transform 0.2s;
-}
-
-.why-card:hover {
-    transform: scale(1.05);
-}
-
-.why-icon {
-    fill: var(--color-accent );
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__title {
+        text-align: center;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 56px;
+    }
 }

@@ -1,0 +1,50 @@
+.procedures-card {
+    width: 344px;
+    height: 456px;
+    border-radius: 4px 120px 4px 120px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(180.05deg, rgba(1, 28, 68, 0) 48.53%, rgba(1, 28, 68, 0.725825) 84.61%, var(--color-primary-dark) 101.39%);
+        border-radius: inherit;
+    }
+
+    &__mask {
+        background-image: url("../images/mask.jpg");
+    }
+    
+    &__botox {
+        background-image: url("../images/botox.jpg");
+    }
+    
+    &__cleaning {
+        background-image: url("../images/cleaning.jpg");
+    }
+    
+    &__title {
+        font-size: 22px;
+        line-height: 1.18;
+        color: var(--color-primary-light );
+        text-align: center;
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 152px;
+        margin-bottom: 0;
+    }
+}
+
+
+

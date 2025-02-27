@@ -1,0 +1,17 @@
+.button {
+    padding: 16px 32px;
+    color: var(--color-button );
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.16;
+    background-color: var(--color-accent );
+    border: 2px solid var(--color-accent );
+    border-radius: 32px;
+    transition: background-color 0.2s color 0.2s;
+
+
+    &:hover {
+        color: var(--color-accent );
+        background-color: transparent;
+    }
+}

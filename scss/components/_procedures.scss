@@ -1,88 +1,18 @@
-.procedures-container {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.procedures-title {
-    text-align: center;
-}
-
-.procedures-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    fill: var(--color-background-dark );
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid var(--color-background-dark );
-    transition: background-color 0.2s fill 0.2s border 0.2s;
-}
-
-.procedures-button:hover {
-    background-color: var(--color-accent );
-    fill: var(--color-primary-light );
-    border: none;
-}
-
-.procedures-button.next {
-    transform: rotate(180deg);
-}
-
-.procedures-list {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 16px;
-}
-
-.procedures-article {
-    width: 344px;
-    height: 456px;
-    border-radius: 4px 120px 4px 120px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.procedures-article:hover {
-    transform: scale(1.05);
-}
-
-.procedures-article::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(180.05deg, rgba(1, 28, 68, 0) 48.53%, rgba(1, 28, 68, 0.725825) 84.61%, var(--color-primary-dark) 101.39%);
-    border-radius: inherit;
-}
-
-.procedure-mask {
-    background-image: url("../images/mask.jpg");
-}
-
-.procedure-botox {
-    background-image: url("../images/botox.jpg");
-}
-
-.procedure-cleaning {
-    background-image: url("../images/cleaning.jpg");
-}
-
-.procedure-title {
-    font-size: 22px;
-    line-height: 1.18;
-    color: var(--color-primary-light );
-    text-align: center;
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 152px;
-    margin-bottom: 0;
+.procedures-section {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    &__title {
+        text-align: center;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 16px;
+    }
 }

@@ -1,27 +1,43 @@
 .contacts-section {
-    padding-bottom: 48px;
-}
+    &__wrapper {
+        padding-bottom: 48px;
+    }
 
-.contacts-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 32px;
-}
+    &__title {
+        text-align: center;
+    }
 
-.contacts-map {
-    flex-shrink: 0;
-    border: none;
-    border-radius: 32px;
-}
+    &__container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 32px;
+    }
 
-.contacts-title {
-    text-align: center;
-}
+    &__map {
+        flex-shrink: 0;
+        border: none;
+        border-radius: 32px;
+    }
 
-.contacts-box {
-    background-color: var(--color-background-dark );
-    border-radius: 32px;
-    padding: 48px 56px;
-    max-width: 424px;
+    &__box {
+        background-color: var(--color-background-dark );
+        border-radius: 32px;
+        padding: 48px 56px;
+        max-width: 424px;
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    &__form-field {
+        margin-bottom: 16px;
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto 8px;
+    }
 }
