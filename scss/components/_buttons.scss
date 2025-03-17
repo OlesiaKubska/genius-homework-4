@@ -1,14 +1,18 @@
 .button {
-    padding: 16px 32px;
+    padding: 12px 24px;
     color: var(--color-button );
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.16;
     background-color: var(--color-accent );
     border: 2px solid var(--color-accent );
     border-radius: 32px;
     transition: background-color 0.2s color 0.2s;
 
+    @media screen and (min-width: $bp-tablet) {
+        padding: 16px 32px;
+        font-size: 18px;
+    }
 
     &:hover {
         color: var(--color-accent );

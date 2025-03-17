@@ -9,7 +9,7 @@
     }
     
     &__control {
-        padding: 18px 32px;
+        padding: 16px 24px;
         width: 100%;
         max-width: 310px;
         font-size: 13px;
@@ -20,6 +20,10 @@
         color: var(--color-primary-light );
         transition: background-color 0.2s;
     
+        @media screen and (min-width: $bp-desktop) {
+            padding: 18px 32px;
+        }
+
         &:focus {
             outline: none;
             background-color: var(--color-accent-text );

@@ -2,37 +2,95 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(89.38deg, #FFFFFF 30.62%, rgba(255, 255, 255, 0.850898) 41.31%, rgba(255, 255, 255, 0.193204) 58.65%, rgba(255, 255, 255, 0) 72.78%), url('../images/hero.jpg');
+    background-image: linear-gradient(
+            56.68deg,
+            #ffffff 20.92%,
+            rgba(255, 255, 255, 0.78) 44.46%,
+            rgba(255, 255, 255, 0.2) 58.9%,
+            rgba(255, 255, 255, 0) 72.45%
+        ),
+        url("../../images/hero/hero-mobile.jpg");
     width: 100%;
-    height: 688px;
+    min-height:  auto;
     position: relative;
-    padding-top: 114px;
-    z-index: 2;
+    padding-top: 70px;
+    z-index: 3;
+
+    @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+                56.68deg,
+                #ffffff 20.92%,
+                rgba(255, 255, 255, 0.78) 44.46%,
+                rgba(255, 255, 255, 0.2) 58.9%,
+                rgba(255, 255, 255, 0) 72.45%
+            ),
+            url("../../images/hero/hero-mobile@2x.jpg");
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        background-image: linear-gradient(
+                89.38deg,
+                #ffffff 30.62%,
+                rgba(255, 255, 255, 0.850898) 41.31%,
+                rgba(255, 255, 255, 0.193204) 58.65%,
+                rgba(255, 255, 255, 0) 72.78%
+            ),
+            url("../../images/hero/hero.jpg");
+            padding-top: 114px;
+            min-height: 100vh;
+
+        @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    89.38deg,
+                    #ffffff 30.62%,
+                    rgba(255, 255, 255, 0.850898) 41.31%,
+                    rgba(255, 255, 255, 0.193204) 58.65%,
+                    rgba(255, 255, 255, 0) 72.78%
+                ),
+                url("../../images/hero/hero@2x.jpg");
+        }
+    }
 
     &__container {
         display: flex;
         flex-direction: column;
-        max-width: 528px;
-        margin-left: 120px;
-        gap: 40px;
+        align-items: center;
+        gap: 32px;
+        margin: 0;
+
+        @media screen and (min-width: $bp-tablet) {
+            align-items: start;
+            gap: 40px;
+            max-width: 530px;
+            margin-left: 120px;
+        }
     }
     
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        text-align: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            gap: 16px;
+            text-align: left;
+        }
     }
     
     &__title {
         font-family: 'Play', sans-serif;
         color: var(--color-accent );
         font-weight: 700;
-        font-size: 54px;
+        font-size: 44px;
         line-height: 0.85;
         margin-bottom: 0;
 
         @media screen and (min-width: $bp-tablet) {
-            font-size: 120px;
+            font-size: 110px;
         }
 
         @media screen and (min-width: $bp-desktop) {
@@ -41,21 +99,38 @@
     }
     
     &__content-text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
         margin-bottom: 0;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 18px;
+        }
     }
     
     &__content-button {
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        max-width: 238px;
+        gap: 8px;
+        max-width: 200px;
+
+        @media screen and (min-width: $bp-tablet) {
+            gap: 16px;
+            max-width: 238px;
+        }
     }
     
     &__text {
-        font-size: 12px;
-        line-height: 1.5;
+        font-size: 11px;
+        line-height: 1.64;
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 12px;
+            line-height: 1.5;
+        }
     }
 }
 

@@ -8,10 +8,20 @@
 
 .text-form {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 14px;
     line-height: 1.13;
     color: var(--color-primary-light );
     max-width: 304px;
     text-align: center;
-    margin: 0 auto 32px;
+    margin: 0 auto 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 16px;
+        margin: 0 auto 22px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        font-size: 22px;
+        margin: 0 auto 32px;
+    }
 }

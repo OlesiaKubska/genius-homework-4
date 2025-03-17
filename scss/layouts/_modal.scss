@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(1, 31, 74, 0.4);
-    padding: 20px 0;
+    padding: 20px;
     z-index: 1000;
     transition: opacity 0.2s visibility 0.2s;
 }
@@ -27,23 +27,38 @@
     max-height: 680px;
     background-color: var(--color-primary-dark );
     border-radius: 48px;
-    padding: 42px 0;
+    padding: 42px;
     overflow: auto;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 52px 98px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 42px 144px;
+    }
 
     &__btn-close {
         position: absolute;
-        top: 42px;
-        right: 42px;
-        width: 32px;
-        height: 32px;
+        top: 30px;
+        right: 30px;
+        width: 24px;
+        height: 24px;
         padding: 0;
         background-color: transparent;
-        color: white;
+        stroke: var(--color-primary-light );
         border: none;
         transition: color 0.2s;
 
+        @media screen and (min-width: $bp-tablet) {
+            top: 42px;
+            right: 42px;
+            width: 32px;
+            height: 32px;
+        }
+
         &:hover {
-            color: var(--color-accent );
+            stroke: var(--color-accent);
         }
     }
 
@@ -51,15 +66,29 @@
         max-width: 436px;
         color: var(--color-primary-light );
         text-align: center;
-        margin: 0 auto 40px;
+        margin: 0 auto 24px;
         font-family: 'Play', sans-serif;
         font-weight: 700;
-        font-size: 64px;
+        font-size: 32px;
         line-height: 1.15;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 40px;
+            margin: 0 auto 32px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 64px;
+            margin: 0 auto 40px;
+        }
     }
 
     &__field {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: $bp-desktop) {
+            margin-bottom: 24px;
+        }
     }
     
     &__button {
