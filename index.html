@@ -31,23 +31,23 @@
                 <a class="header__link" href="#contacts-section">Контакти</a>
               </li>
             </ul>
-            <ul class="header__list">
+            <ul class="header__social social">
               <li>
-                <a class="header__link" href="#"
+                <a class="social__link" href="#"
                   ><svg width="32" height="32">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a class="header__link" href="#"
+                <a class="social__link" href="#"
                   ><svg width="32" height="32">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a class="header__link" href="#"
+                <a class="social__link" href="#"
                   ><svg width="32" height="32">
                     <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
@@ -55,6 +55,75 @@
               </li>
             </ul>
           </nav>
+          <button type="button" class="header__burger menu-btn-open">
+            <svg class="header__menu-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <div class="mobile-menu__container">
+              <button
+                type="button"
+                class="mobile-menu__btn-close menu-btn-close"
+              >
+                <svg class="mobile-menu__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <nav class="mobile-menu__nav">
+                <a href="/">
+                  <img
+                    class="mobile-menu__logo"
+                    src="./images/logo.svg"
+                    alt="logo"
+                  />
+                </a>
+                <ul class="mobile-menu__list">
+                  <li>
+                    <a class="mobile-menu__link" href="#about-section"
+                      >Про нас</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link" href="#why-section">Чому ми</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link" href="#procedures-section"
+                      >Наші процедури</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link" href="#contacts-section"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+                <ul class="social">
+                  <li>
+                    <a class="social__link" href="#"
+                      ><svg width="32" height="32">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__link" href="#"
+                      ><svg width="32" height="32">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social__link" href="#"
+                      ><svg width="32" height="32">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -77,7 +146,7 @@
           </div>
         </div>
       </section>
-      <section class="section about-section" id="about-section">
+      <!-- <section class="section about-section" id="about-section">
         <div class="container">
           <div class="about-section__container">
             <div class="about-section__content">
@@ -111,8 +180,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="section why-section" id="why-section">
+      </section> -->
+      <!-- <section class="section why-section" id="why-section">
         <div class="container">
           <div class="why-section__container">
             <h2 class="section__title why-section__title">
@@ -156,8 +225,8 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="section procedures-section" id="procedures-section">
+      </section> -->
+      <!-- <section class="section procedures-section" id="procedures-section">
         <div class="container">
           <h2 class="section__title procedures-section__title">
             Наші <span class="text-accent">процедури</span>
@@ -192,8 +261,8 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="section contacts-section" id="contacts-section">
+      </section> -->
+      <!-- <section class="section contacts-section" id="contacts-section">
         <div class="container">
           <div class="contacts-section__wrapper">
             <h2 class="section__title contacts-section__title">
@@ -279,9 +348,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__container">
           <nav class="footer__nav">
@@ -362,7 +431,7 @@
           </address>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <div class="backdrop is-hidden">
       <div class="modal">
@@ -443,5 +512,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

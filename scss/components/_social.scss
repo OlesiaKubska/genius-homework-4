@@ -1,0 +1,21 @@
+.social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+        gap: 32px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        fill: var(--color-primary-dark );
+        transition: color 0.2s fill 0.2s;
+
+        &:hover {
+            color: var(--color-accent );
+            fill: var(--color-accent );
+        }
+    }
+}

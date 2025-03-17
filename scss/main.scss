@@ -1,45 +1,29 @@
+@import './utils/variables';
+
+@import './utils/fonts';
+@import './utils/globals';
+@import './utils/texts';
+@import './utils/visually-hidden';
+
 @import './base';
 
 @import './components/about-box';
-
 @import './components/about';
-
 @import './components/buttons';
-
 @import './components/carousel';
-
 @import './components/contacts';
-
 @import './components/hero';
-
 @import './components/input';
-
 @import './components/procedures-card';
-
 @import './components/procedures';
-
+@import './components/social';
 @import './components/why-card';
-
 @import './components/why';
 
 @import './layouts/footer';
-
 @import './layouts/form';
-
 @import './layouts/header';
-
+@import './layouts/mobile-menu';
 @import './layouts/modal';
-
 @import './layouts/sections';
-
 @import './layouts/terms';
-
-@import './utils/fonts';
-
-@import './utils/globals';
-
-@import './utils/texts';
-
-@import './utils/variables';
-
-@import './utils/visually-hidden';

@@ -27,9 +27,17 @@
         font-family: 'Play', sans-serif;
         color: var(--color-accent );
         font-weight: 700;
-        font-size: 140px;
-        line-height: 0.8;
+        font-size: 54px;
+        line-height: 0.85;
         margin-bottom: 0;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 120px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 140px;
+        }
     }
     
     &__content-text {

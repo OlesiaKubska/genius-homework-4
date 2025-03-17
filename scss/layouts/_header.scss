@@ -21,29 +21,52 @@
     }
 
     &__menu {
-        display: flex;
-        gap: 56px;
-        flex-grow: 1;
-        justify-content: center;
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+            gap: 56px;
+            flex-grow: 1;
+            justify-content: center;
+        }
     }
 
     &__link {
         font-size: 18px;
         line-height: 1.17;
         color: var(--color-primary-dark );
-        fill: var(--color-primary-dark );
         transition: color 0.2s fill 0.2s;
 
         &:hover {
             color: var(--color-accent );
-            fill: var(--color-accent );
         }
     }
 
-    &__list {
-        display: flex;
-        gap: 32px;
-        flex-grow: 1;
-        justify-content: center;
+    &__social {
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+
+    &__burger {
+        background-color: transparent;
+        border: none;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        fill: var(--color-primary-light);
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            display: none;
+        }
     }
 }
