@@ -17,8 +17,19 @@
     
     &__list {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         text-align: center;
-        gap: 56px;
+        align-items: center;
+        gap: 16px;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            gap: 56px;
+        }
     }
 }
