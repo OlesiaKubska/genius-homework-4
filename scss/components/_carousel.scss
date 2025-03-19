@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
     padding: 0;
     fill: var(--color-background-dark );
     background-color: transparent;
@@ -11,13 +12,18 @@
     border: 1px solid var(--color-background-dark );
     transition: background-color 0.2s fill 0.2s border 0.2s;
 
+    @media screen and (min-width: $bp-desktop) {
+        width: 44px;
+        height: 44px;
+    }
+
     &:hover {
         background-color: var(--color-accent );
         fill: var(--color-primary-light );
         border: none;
     }
 
-    &__next {
+    &.next {
         transform: rotate(180deg);
     }
 }
