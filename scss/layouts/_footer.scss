@@ -2,41 +2,112 @@
     position: relative;
     padding: 56px 0;
     background-color: var(--color-primary-dark );
+    background-image: url(
+            '../images/footer/background-footer-mobile.png'
+        );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: visible;
+
+    @media screen and (min-width: $bp-tablet) {
+        background-image: url(
+            '../images/footer/background-footer.png'
+        );
+    }
 
     &::before {
-        content: '';
-        position: absolute;
-        bottom: -60px;
-        background-repeat: no-repeat;
-        right: -30px;
-        width: 278px;
-        height: 213px;
-        background-image: url(../images/footer.png);
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -68px;
+            right: -30px;
+            background-repeat: no-repeat;
+            width: 278px;
+            height: 220px;
+            background-image: url(../images/footer/footer.png);
+        }
     }
 
     &__container {
         display: flex;
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 12px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            gap: 20px;
+        }
     }
     
     &__nav, 
     &__address {
         display: flex;
-        flex-basis: 50%;
-        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            text-align: left;
+            flex-basis: 50%;
+            gap: 12px;
+        }
+        
+        @media screen and (min-width: $bp-desktop) {
+            gap: 20px;
+        }
     }
-    
-    &__logo,
+
+    &__logo {
+        margin-bottom: 42px;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+    }
+
     &__menu {
-        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (min-width: $bp-tablet) {
+            flex-grow: 1;
+        }
+    }
+
+    &__logo-img {
+        max-width: 57px;
+        height: auto;
+
+        @media screen and (min-width: $bp-tablet) {
+            max-width: 68px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            max-width: 83px;
+        }
     }
 
     &__link {
         color: var(--color-primary-light );
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.1;
         transition: color 0.2s;
         fill: var(--color-primary-light );
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 16px;
+        }
     
         &:hover {
             color: var(--color-accent );
@@ -53,24 +124,65 @@
         flex-grow: 1;
     }
 
+    &__address-list {
+        display: none;
+            
+        @media screen and (min-width: $bp-tablet) {
+            display: block;
+        }
+    }
+
     &__address-link {
         font-style: normal;
     }
 
-    &__media {
+    &__info {
         display: flex;
-        gap: 24px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        @media screen and (min-width: $bp-tablet) {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    &__social {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        @media screen and (min-width: $bp-tablet) {
+            order: 1;
+            justify-content: flex-start;
+            gap: 22px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            gap: 24px;
+        }
     }
 
     &__info-link {
-        font-style: normal;
+        order: 1;
         margin-bottom: 16px;
+
+        @media screen and (min-width: $bp-tablet) {
+            order: 1;
+        }
     }
 
     &__info-text {
+        order: 3;
         color: var(--color-accent-text );
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.15;
         font-style: normal;
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 13px;
+        }
     }
 }

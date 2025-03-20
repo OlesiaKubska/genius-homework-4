@@ -42,13 +42,13 @@
         height: 232px;
         margin: 0 -24px;
         border: none;
-        border-radius: 32px;
 
         @media screen and (min-width: $bp-tablet) {
             order: 1;
             margin: 0;
             width: 320px;
             height: 482px;
+            border-radius: 32px;
         }
 
         @media screen and (min-width: $bp-desktop) {
